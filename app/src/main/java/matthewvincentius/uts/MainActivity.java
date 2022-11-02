@@ -36,6 +36,9 @@ private Button btn_daftar;
 
                 nama = et_nama.getText().toString();
                 nomor = et_nomor.getText().toString();
+                facebook = cb_fb.getText().toString();
+                instagram = cb_ig.getText().toString();
+                website = cb_web.getText().toString();
 
                 if (nama.trim().equals("")){
                     et_nama.setError("Wajib Isi Nama!");
@@ -58,17 +61,9 @@ private Button btn_daftar;
                     Intent intent = new Intent(MainActivity.this, UTS.class);
                     intent.putExtra("varNama", nama);
                     intent.putExtra("varNomor", nomor);
+                    intent.putExtra("varFb", facebook);
+
                     startActivity(intent);
-                }
-                switch (view.getId()){
-                    case R.id.cb_fb:
-
-                        break;
-                    case R.id.cb_ig:
-
-                    case R.id.cb_web:
-
-
                 }
             }
         });
