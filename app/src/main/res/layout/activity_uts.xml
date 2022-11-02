@@ -6,8 +6,15 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
-    tools:context=".UTS">
+    tools:context=".UTS"
+    >
 
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back                                                       "
+        />
     <TextView
         android:id="@+id/tv_konfirmasi"
         android:layout_width="match_parent"
@@ -17,6 +24,7 @@
         android:textAlignment="center"
         android:textStyle="bold"
         />
+
     <TextView
         android:id="@+id/tv_nama"
         android:layout_width="match_parent"
@@ -34,5 +42,24 @@
         android:layout_height="wrap_content"
         android:text="Informasi Pendaftaran Dari:"
         android:layout_marginTop="20dp"
+        />
+    <CheckedTextView
+        android:id="@+id/ctv_fb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        />
+    <CheckedTextView
+        android:id="@+id/ctv_ig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        />
+    <CheckedTextView
+        android:id="@+id/ctv_web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+
         />
 </LinearLayout>

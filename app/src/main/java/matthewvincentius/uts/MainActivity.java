@@ -7,8 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 private EditText et_nama, et_nomor;
@@ -21,7 +26,6 @@ private Button btn_daftar;
 
         et_nama = findViewById(R.id.et_nama);
         et_nomor = findViewById(R.id.et_nomor);
-
         cb_fb = findViewById(R.id.cb_fb);
         cb_ig = findViewById(R.id.cb_ig);
         cb_web = findViewById(R.id.cb_web);
@@ -30,15 +34,16 @@ private Button btn_daftar;
         btn_daftar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String nama, nomor;
                 String facebook, instagram, website;
-                int selectedID;
 
                 nama = et_nama.getText().toString();
                 nomor = et_nomor.getText().toString();
                 facebook = cb_fb.getText().toString();
                 instagram = cb_ig.getText().toString();
                 website = cb_web.getText().toString();
+
 
                 if (nama.trim().equals("")){
                     et_nama.setError("Wajib Isi Nama!");
@@ -49,24 +54,16 @@ private Button btn_daftar;
                 else if (!cb_fb.isChecked()&&!cb_ig.isChecked()&&!cb_web.isChecked()){
                     Toast.makeText(getApplicationContext(), "Pilih Salah Satu Sumber Informasi!", Toast.LENGTH_SHORT).show();
                 }
-                else if (cb_fb.isChecked())
-                Toast.makeText(getApplicationContext(), "Facebook", Toast.LENGTH_SHORT).show();
-
-                else if (cb_ig.isChecked())
-                    Toast.makeText(getApplicationContext(), "Instagram", Toast.LENGTH_SHORT).show();
-
-                else if (cb_web.isChecked())
-                    Toast.makeText(getApplicationContext(), "Website", Toast.LENGTH_SHORT).show();
-                else{
+                else {
                     Intent intent = new Intent(MainActivity.this, UTS.class);
                     intent.putExtra("varNama", nama);
                     intent.putExtra("varNomor", nomor);
                     intent.putExtra("varFb", facebook);
                     intent.putExtra("varIg", instagram);
                     intent.putExtra("varWeb", website);
-
                     startActivity(intent);
                 }
+
             }
         });
 
