@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_formulir_pendaftaran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="FORMULIR PENDAFTARAN"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/et_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:inputType="text"
+        android:hint="Nama Lengkap"
+        />
+    <EditText
+        android:id="@+id/et_nomor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Nomor Pendaftaran"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:id="@+id/tv_informasi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Informasi Pendaftaran Dari:"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#111"
+        />
+    <CheckBox
+        android:id="@+id/cb_fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Facebook"
+        />
+    <CheckBox
+        android:id="@+id/cb_ig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instagram"
+        />
+    <CheckBox
+        android:id="@+id/cb_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Website"
+        />
+    <Button
+        android:id="@+id/btn_daftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="Daftar"
+        />
+
+
+
+</LinearLayout>
