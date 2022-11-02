@@ -62,6 +62,8 @@ private Button btn_daftar;
                     intent.putExtra("varNama", nama);
                     intent.putExtra("varNomor", nomor);
                     intent.putExtra("varFb", facebook);
+                    intent.putExtra("varIg", instagram);
+                    intent.putExtra("varWeb", website);
 
                     startActivity(intent);
                 }
